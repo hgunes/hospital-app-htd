@@ -1,0 +1,9 @@
+<tr>
+  <td><%= link_to doctor.first_name, doctor_path(doctor) %></td>
+  <td><%= doctor.last_name %></td>
+  <td><%= doctor.practicing_from %></td>
+  <td><%= doctor.qualification_number %></td>
+  <td><%= doctor.employment %></td>
+  <td><%= link_to 'Edit', edit_doctor_path(doctor), class: 'btn btn-warning' %></td>
+  <td><%= link_to 'Delete', [doctor], method: :delete, class: 'btn btn-danger' %></td>
+</tr>

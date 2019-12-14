@@ -1,0 +1,10 @@
+<%= link_to '< Go back', doctors_path, class: 'btn btn-primary' %>
+<p></p>
+<%= @doctor.first_name %>
+<%= @doctor.last_name %>
+<p><%= @doctor.practicing_from %></p>
+<p><%= @doctor.qualification_number %></p>
+<p><%= @doctor.employment %></p>
+
+<%= link_to 'Edit', edit_doctor_path(@doctor), class: 'btn btn-warning' %>
+<%= link_to 'Delete', [@doctor], method: :delete, class: 'btn btn-warning' %>

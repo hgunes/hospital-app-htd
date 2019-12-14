@@ -1,0 +1,48 @@
+require:
+  - rubocop-rspec
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.6.3
+  Exclude:
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'bin/*'
+
+Metrics/LineLength:
+  Max: 130
+
+Metrics/BlockLength:
+  Enabled: true
+  Max: 35
+  Exclude:
+    - spec/**/*
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/MixinUsage:
+  Exclude:
+    - bin/*
+
+Metrics/AbcSize:
+  Max: 30
+
+Style/Documentation:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/ExpectInHook:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/features/**/*
+    - spec/views/**/*
+    - spec/requests/**/*
+
+RSpec/LetSetup:
+  Enabled: false

@@ -1,0 +1,15 @@
+<h1>Create Doctors</h1>
+
+<%= form_for @doctor do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <%= f.label :practicing_from %>
+    <%= f.date_field :practicing_from %>
+    <%= f.label :qualification_number %>
+    <%= f.number_field :qualification_number %>
+    <%= f.label :employment %>
+    <%= f.select :employment, Doctor.employments.keys %>
+    <%= f.submit 'Submit' %>
+<% end %>

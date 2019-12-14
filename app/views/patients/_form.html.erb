@@ -1,0 +1,14 @@
+<%= form_for patient do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <%= f.label :gender %>
+    <%= f.select :gender, Patient.genders.keys %>
+    <%= f.label :doctor_id %>
+    <%= f.select :doctor_id, Doctor.all.map { |doctor| ["#{doctor.first_name} #{doctor.last_name}", doctor.id] } %>
+    <%= f.submit 'Save' %>
+
+<% end %>
