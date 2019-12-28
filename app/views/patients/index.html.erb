@@ -26,7 +26,7 @@
       <td><%= patient.last_name %></td>
       <td><%= patient.age %></td>
       <td><%= patient.gender.titleize %></td>
-      <td><%= patient.doctor&.first_name %></td>
+      <td><%= "#{patient.doctor&.first_name}" + " #{patient.doctor&.last_name}" %></td>
       <td><%= link_to 'Edit', edit_patient_path(patient), class: 'btn btn-warning' %></td>
       <td><%= link_to 'Delete', [patient], method: :delete, class: 'btn btn-danger' %><td>
     </tr>
