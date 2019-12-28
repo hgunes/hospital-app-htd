@@ -15,6 +15,7 @@ end
     first_name: "Patient",
     last_name: "#{patient}",
     age: patient + 20,
-    gender: 1
+    gender: 1,
+    doctor_id: Doctor.last.id
   )
 end
